@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090909">
+<title>THE MYSTERY FILES — Case 001</title>
+<style>
+:root{--bg:#090909;--panel:#141414;--panel2:#1b1b1b;--red:#c52b35;--red2:#7d171e;--cream:#e9dfd0;--muted:#a99f94;--line:#39302e}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at top,#251012 0,#090909 48%);color:var(--cream);font-family:Georgia,'Times New Roman',serif;line-height:1.6}
+header{padding:22px 7%;border-bottom:1px solid #542328;display:flex;align-items:center;justify-content:space-between;gap:15px;background:#080808eF;position:sticky;top:0;z-index:5}
+.brand{font-family:Arial,sans-serif;font-weight:900;letter-spacing:3px;font-size:clamp(17px,3vw,25px)}.brand span{color:var(--red)}
+nav{display:flex;gap:18px;flex-wrap:wrap}nav a{color:var(--cream);text-decoration:none;font:12px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase}nav a:hover{color:#ff626b}
+.hero{padding:90px 7% 75px;max-width:1100px;margin:auto}.eyebrow{color:#f05a62;letter-spacing:4px;font:12px Arial,sans-serif;text-transform:uppercase}.hero h1{font:900 clamp(42px,9vw,90px)/.95 Arial,sans-serif;letter-spacing:-4px;margin:18px 0}.hero h1 span{color:var(--red)}.hero p{max-width:650px;color:#c2b8ad;font-size:18px}.stamp{display:inline-block;border:2px solid var(--red);color:#ff666e;padding:8px 13px;transform:rotate(-3deg);font: bold 12px Arial,sans-serif;letter-spacing:2px;margin-top:20px}
+main{max-width:1100px;margin:auto;padding:0 7% 80px}.casebar{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 0;margin-bottom:45px;font:12px Arial,sans-serif;letter-spacing:1.5px;color:var(--muted)}.casebar strong{color:var(--cream)}
+section{margin:58px 0}.section-head{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid var(--line);margin-bottom:22px}.section-head b{color:var(--red);font:12px Arial,sans-serif;letter-spacing:2px}.section-head h2{font:700 27px Arial,sans-serif;margin:0 0 12px}.intro{color:#c2b8ad;max-width:780px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:14px}.card{background:linear-gradient(145deg,#1b1b1b,#101010);border:1px solid #3b3030;padding:20px;text-align:left;color:var(--cream);cursor:pointer;transition:.2s;min-height:150px}.card:hover,.card.active{border-color:var(--red);transform:translateY(-2px);box-shadow:0 8px 30px #a21d2520}.card .num{color:var(--red);font:11px Arial,sans-serif;letter-spacing:2px}.card h3{font:700 20px Arial,sans-serif;margin:8px 0 4px}.card p{color:var(--muted);font-size:14px;margin:0}.detail{margin-top:16px;background:#171313;border-left:3px solid var(--red);padding:22px;min-height:90px}.detail h3{margin:0 0 8px;font:700 20px Arial,sans-serif}.detail p{margin:0;color:#d1c6ba}.tag{display:inline-block;color:#ff737a;border:1px solid #773038;padding:3px 8px;font:10px Arial,sans-serif;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.timeline{border-left:1px solid #713039;margin-left:9px;padding-left:22px}.event{position:relative;padding:0 0 22px}.event:before{content:"";position:absolute;width:9px;height:9px;border-radius:50%;background:var(--red);left:-27px;top:7px}.event time{color:#ff7279;font:12px Arial,sans-serif;letter-spacing:1px}.event p{margin:3px 0;color:#c9beb3}
+form{background:#151212;border:1px solid #493033;padding:22px;max-width:650px}label{display:block;font:13px Arial,sans-serif;letter-spacing:1px;margin:14px 0 7px}select,textarea{width:100%;background:#090909;border:1px solid #514144;color:var(--cream);padding:12px;font:16px Georgia,serif}textarea{min-height:95px;resize:vertical}.btn{background:var(--red);border:0;color:white;padding:13px 20px;font:bold 12px Arial,sans-serif;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;margin-top:16px}.btn:hover{background:#e23b45}.notice{color:var(--muted);font-size:13px}.solution{display:none;margin-top:20px;background:#201114;border:1px solid var(--red);padding:22px}.solution.show{display:block}.solution h3{color:#ff7078;font-family:Arial,sans-serif}footer{border-top:1px solid var(--line);padding:28px 7%;text-align:center;color:#81766d;font:11px Arial,sans-serif;letter-spacing:2px}
+@media(max-width:600px){header{align-items:flex-start;flex-direction:column}nav{gap:12px}.hero{padding-top:62px}.hero h1{letter-spacing:-2px}.casebar{font-size:10px}}
+</style>
+</head>
+<body>
+<header><div class="brand">THE <span>MYSTERY</span> FILES</div><nav><a href="#case">The Case</a><a href="#suspects">Suspects</a><a href="#evidence">Evidence</a><a href="#verdict">Your Verdict</a></nav></header>
+<div class="hero"><div class="eyebrow">Confidential investigation · File 001</div><h1>THE MISSING<br><span>MASTERPIECE.</span></h1><p>A priceless painting has vanished from Westbridge Gallery. Four people had access. Everyone has a story. Only the evidence can reveal what really happened.</p><div class="stamp">UNSOLVED CASE — INVESTIGATE</div></div>
+<main>
+<div class="casebar"><span>CASE NO. <strong>001-WG</strong></span><span>LOCATION: <strong>WESTBRIDGE GALLERY</strong></span><span>STATUS: <strong>OPEN</strong></span></div>
+<section id="case"><div class="section-head"><b>01</b><h2>The Case Brief</h2></div><p class="intro">At 9:30 PM, during a private exhibition, the gallery's prized painting <em>The Last Light</em> was discovered missing. The display room was locked, the alarm showed no forced entry, and the staff insist nobody left with a painting. Your task is to examine the statements, study the evidence, and decide who took it.</p></section>
+<section id="suspects"><div class="section-head"><b>02</b><h2>The Suspects</h2></div><p class="intro">Select each suspect to read their interview statement. Look for details that agree—or conflict—with the evidence.</p>
+<div class="grid" id="suspectCards">
+<button class="card" data-kind="suspect" data-id="mara"><span class="num">SUSPECT 01</span><h3>Mara Vale</h3><p>Gallery director · Controlled and guarded</p></button>
+<button class="card" data-kind="suspect" data-id="elias"><span class="num">SUSPECT 02</span><h3>Elias Reed</h3><p>Restoration artist · Had workshop access</p></button>
+<button class="card" data-kind="suspect" data-id="nina"><span class="num">SUSPECT 03</span><h3>Nina Park</h3><p>Event photographer · Carries a camera</p></button>
+<button class="card" data-kind="suspect" data-id="theo"><span class="num">SUSPECT 04</span><h3>Theo Grant</h3><p>Security supervisor · Monitored the building</p></button>
+</div><div class="detail" id="suspectDetail" aria-live="polite"><span class="tag">Interview transcript</span><h3>Select a suspect</h3><p>Their statement will appear here.</p></div></section>
+<section id="evidence"><div class="section-head"><b>03</b><h2>Evidence Locker</h2></div><p class="intro">Six items were recovered during the initial investigation. Select an item to inspect the report.</p>
+<div class="grid">
+<button class="card" data-kind="evidence" data-id="manual"><span class="num">EVIDENCE A</span><h3>Lighting Manual</h3><p>System record · 9:12 PM</p></button>
+<button class="card" data-kind="evidence" data-id="flicker"><span class="num">EVIDENCE B</span><h3>Power Interruption</h3><p>Gallery lights · 9:17 PM</p></button>
+<button class="card" data-kind="evidence" data-id="wax"><span class="num">EVIDENCE C</span><h3>Restoration Wax</h3><p>Trace material · Display frame</p></button>
+<button class="card" data-kind="evidence" data-id="crate"><span class="num">EVIDENCE D</span><h3>Crate Register</h3><p>Loading bay · 9:26 PM</p></button>
+<button class="card" data-kind="evidence" data-id="camera"><span class="num">EVIDENCE E</span><h3>Camera Timestamp</h3><p>Photograph metadata</p></button>
+<button class="card" data-kind="evidence" data-id="photo"><span class="num">EVIDENCE F</span><h3>Corrected Photograph</h3><p>Image analysis · 9:17 PM</p></button>
+</div><div class="detail" id="evidenceDetail" aria-live="polite"><span class="tag">Forensic report</span><h3>Select an evidence item</h3><p>The investigation notes will appear here.</p></div></section>
+<section><div class="section-head"><b>04</b><h2>Timeline of Events</h2></div><div class="timeline">
+<div class="event"><time>9:12 PM</time><p>The lighting system is switched to manual mode using a restoration studio access code.</p></div>
+<div class="event"><time>9:17 PM</time><p>The gallery lights flicker for eleven seconds. Nina's camera captures the moment.</p></div>
+<div class="event"><time>9:26 PM</time><p>A transport crate is signed out from the loading bay.</p></div>
+<div class="event"><time>9:30 PM</time><p>The missing painting is discovered.</p></div></div></section>
+<section id="verdict"><div class="section-head"><b>05</b><h2>Submit Your Verdict</h2></div><p class="intro">Review every statement and clue before making your accusation. The solution will remain sealed until you submit.</p>
+<form id="verdictForm"><label for="accused">Who do you believe took the painting?</label><select id="accused" required><option value="">Choose a suspect…</option><option value="mara">Mara Vale</option><option value="elias">Elias Reed</option><option value="nina">Nina Park</option><option value="theo">Theo Grant</option></select><label for="reason">What evidence supports your conclusion?</label><textarea id="reason" placeholder="Explain which clues led you to your decision…" required></textarea><button class="btn" type="submit">Submit accusation</button></form>
+<div class="solution" id="solution" aria-live="polite"></div></section>
+</main><footer>THE MYSTERY FILES · CASE 001 · THE TRUTH IS IN THE DETAILS</footer>
+<script>
+const statements={
+mara:{name:"Mara Vale",role:"Gallery director",text:"I was in my office reviewing the guest list. I heard the lights flicker, but I did not leave my desk. The painting was insured, of course, but I had no reason to remove it. Only a few staff members have access to the restoration rooms."},
+elias:{name:"Elias Reed",role:"Restoration artist",text:"I was in the restoration studio preparing materials. I know the lighting system can be switched to manual mode, but I did not touch it that evening. I finished my work before the exhibition ended. I never went near the display room."},
+nina:{name:"Nina Park",role:"Event photographer",text:"I was photographing the guests when the lights flickered. My camera clock is seven minutes fast, so the timestamp needs correcting. I noticed someone moving near the side corridor, but I couldn't identify them in the dark."},
+theo:{name:"Theo Grant",role:"Security supervisor",text:"I was monitoring the security desk. The cameras showed no forced entry, and the display-room alarm was not triggered. The brief lighting interruption was unusual, but the system came back online by itself."}
+};
+const evidence={
+manual:["Lighting Manual","At 9:12 PM, the gallery lighting was switched to manual mode using an access code assigned to the restoration studio. This indicates someone used credentials associated with the restoration area."],
+flicker:["Power Interruption","At 9:17 PM, the gallery lights flickered for eleven seconds. The interruption could have created a brief opportunity to move through the display room unseen."],
+wax:["Restoration Wax","A small trace of restoration wax was found on the painting's display frame. The material is used in the restoration studio, connecting the frame to that workspace."],
+crate:["Crate Register","A transport crate was signed out at 9:26 PM. The entry was made shortly before the painting was discovered missing. The register does not identify what was inside."],
+camera:["Camera Timestamp","Nina Park's camera clock was seven minutes fast. Her photograph marked 9:24 PM was actually taken at 9:17 PM, during the lighting interruption."],
+photo:["Corrected Photograph","After correcting the camera clock, the photograph places Nina in the gallery photographing guests at 9:17 PM. Her image also confirms the brief lighting interruption."]
+};
+function showSuspect(id){const s=statements[id];if(!s)return;document.querySelectorAll('[data-kind="suspect"]').forEach(b=>b.classList.toggle('active',b.dataset.id===id));document.getElementById('suspectDetail').innerHTML='<span class="tag">Interview transcript</span><h3>'+s.name+' — '+s.role+'</h3><p>“'+s.text+'”</p>';}
+function showEvidence(id){const e=evidence[id];if(!e)return;document.querySelectorAll('[data-kind="evidence"]').forEach(b=>b.classList.toggle('active',b.dataset.id===id));document.getElementById('evidenceDetail').innerHTML='<span class="tag">Forensic report</span><h3>'+e[0]+'</h3><p>'+e[1]+'</p>';}
+document.addEventListener('click',event=>{const button=event.target.closest('button[data-kind]');if(!button)return;if(button.dataset.kind==='suspect')showSuspect(button.dataset.id);if(button.dataset.kind==='evidence')showEvidence(button.dataset.id);});
+document.getElementById('verdictForm').addEventListener('submit',event=>{event.preventDefault();const choice=document.getElementById('accused').value;const reason=document.getElementById('reason').value.trim();const box=document.getElementById('solution');const correct=choice==='elias';box.classList.add('show');box.innerHTML=correct?'<h3>Your accusation is correct.</h3><p>Elias Reed stole <em>The Last Light</em>. The lighting access code, restoration wax, and crate timing connect him to the disappearance. The camera evidence corrects Nina’s timeline and shows she was photographing guests during the interruption.</p>':'<h3>Case review: your accusation is not correct.</h3><p>The culprit was Elias Reed, the restoration artist. Re-examine the 9:12 lighting-system access, the restoration wax on the frame, and the crate signed out at 9:26 PM. The corrected camera time helps establish Nina’s whereabouts.</p>';box.scrollIntoView({behavior:'smooth',block:'center'});});
+</script>
+</body></html>
